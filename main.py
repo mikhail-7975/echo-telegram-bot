@@ -5,8 +5,6 @@ from telegram.ext.messagehandler import MessageHandler
 from telegram.ext.updater import Updater
 from telegram.update import Update
 
-import config
-
 
 class TelegramBot:
     def __init__(self, bot_url: str,):
