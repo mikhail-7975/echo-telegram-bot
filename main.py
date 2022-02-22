@@ -50,5 +50,5 @@ class TelegramBot:
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    app = TelegramBot(bot_url=config.bot_token)
+    app = TelegramBot(bot_url='5238183931:AAEUAMyLxWrMfekuJzfM1DKpdiimZqmxG3Q')
     app.run()
