@@ -5,6 +5,7 @@ from telegram.ext.messagehandler import MessageHandler
 from telegram.ext.updater import Updater
 from telegram.update import Update
 
+import config
 
 class TelegramBot:
     def __init__(self, bot_url: str,):
@@ -40,7 +41,7 @@ class TelegramBot:
             "Sorry '%s' is not a valid command" % update.message.text)
 
     def text_message_handler(self, update: Update, context: CallbackContext):
-        update.message.reply_text("text message handler")
+        update.message.reply_text("text message handler, hidden config")
 
     def run(self):
         self.updater.start_polling()
@@ -48,5 +49,6 @@ class TelegramBot:
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    app = TelegramBot(bot_url='5238183931:AAEUAMyLxWrMfekuJzfM1DKpdiimZqmxG3Q')
+    app = TelegramBot(bot_url=config.bot_token)
+    # app = TelegramBot(bot_url='5238183931:AAEUAMyLxWrMfekuJzfM1DKpdiimZqmxG3Q')
     app.run()
